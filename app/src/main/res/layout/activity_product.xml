@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductActivity">
+
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        app:iss_auto_cycle="true"
+        app:iss_period="4000"
+        app:iss_delay="0"
+        tools:ignore="MissingConstraints" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/rounded_top"
+        android:padding="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/nama_produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"
+            android:textColor="#291F71"
+            android:text="Sweater Merah PARAM"
+
+            />
+
+        <TextView
+            android:id="@+id/harga_produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="#291F71"
+
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"
+            android:text="RP. 50.000"
+            />
+
+        <TextView
+            android:id="@+id/size_produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nama_produk"
+
+            android:textColor="#3E3E3E"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:text="Size : fit to L"
+            />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/size_produk"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/label_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator"
+            android:textColor="#291F71"
+
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"
+            android:text="Deskripsi : "
+
+            />
+
+        <TextView
+            android:id="@+id/deskripsi_produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/label_deskripsi"
+
+            android:textColor="#3E3E3E"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:text="Ini deskripsi gan"
+            />
+
+        <Button
+            android:id="@+id/btn_beli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deskripsi_produk"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingHorizontal="80dp"
+            android:textSize="18sp"
+            android:backgroundTint="#291F71"
+            android:text="BELI"
+            />
+
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

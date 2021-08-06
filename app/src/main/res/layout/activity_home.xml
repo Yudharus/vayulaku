@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+    tools:context=".HomeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingVertical="5dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            >
+
+            <android.widget.SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/find_product"
+                android:background="@drawable/rounded_flow"
+                android:backgroundTint="@color/white"
+                android:maxWidth="150dp"
+                >
+            </android.widget.SearchView>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="vayu.laku Thrift Store"
+                android:textColor="#291F71"
+                android:textSize="20sp"
+                android:paddingVertical="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rounded_kiri_sebagian"
+
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="New Stock"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:paddingVertical="5dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/new_stock_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Collection (Limited)"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:paddingVertical="5dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/limited_stock_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:listitem="@layout/list_product"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
